@@ -1,14 +1,9 @@
 import datetime
 from sqlalchemy import DATE, Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship, Mapped, mapped_column
-from pydantic import BaseModel
 
 from .database import Base
 
-class Word(BaseModel):
-    word: str
-    translation: str
-    
     
 class User(Base):
     __tablename__ = "users"
